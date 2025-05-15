@@ -10,8 +10,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index element={<Navigate to="product-submission" replace />} />
-      <Route path='/product-submission' element={<Product_Submission />} />
-      <Route path='/my-products' element={<My_Product />} />
+      <Route path='product-submission' element={<Product_Submission />} />
+      <Route path='my-products' element={<My_Product />} />
     </Route>
   )
 )
