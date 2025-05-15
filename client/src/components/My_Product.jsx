@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard'
+import BASE_URL from '../../constant'
 
 const My_Product = () => {
 
@@ -11,7 +12,7 @@ const My_Product = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/my-products');
+      const response = await axios.get(`${BASE_URL}/api/my-products`);
       setProducts(response.data);
       setError(null);
     } catch (err) {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import BASE_URL from '../../constant';
 
 const Product_Submission = () => {
     const [productData, setProductData] = useState({
@@ -24,7 +25,7 @@ const Product_Submission = () => {
         setIsSubmitting(true);
         
         try {
-            const response = await axios.post('http://localhost:8000/api/add-product', productData);
+            const response = await axios.post(`${BASE_URL}/api/add-product`, productData);
             setSubmitStatus({ success: true, message: 'Product added successfully!' });
             
             // Reset form after successful submission
